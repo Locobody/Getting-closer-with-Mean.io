@@ -1,0 +1,28 @@
+{
+  "name": "LogSendingChat",
+  "version": "1.0.0",
+  "description": "Don't forget to change Login and Password in server.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.2",
+    "mongodb": "^1.4.34",
+    "nodemailer": "^0.7.1",
+    "socket.io": "^1.3.5",
+    "mongoose": "^3.8.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Locobody/Getting-closer-with-Mean.io.git"
+  },
+  "author": "Anthony Eardrop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Locobody/Getting-closer-with-Mean.io/issues"
+  },
+  "homepage": "https://github.com/Locobody/Getting-closer-with-Mean.io"
+}
