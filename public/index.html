@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru" ng-app='myPage'>
+<head>
+  <link rel="stylesheet" href='style.css'></link>
+  <title>Getting Started!</title>
+</head>
+<body>
+    <div id="nope"></div>
+      <div class="question"> Please, enter your name.
+        <input id="answer"></input>
+        <button id="go" onclick="go()">Go?</button>
+      </div>
+      <div class="question2"> And enter your email.
+        <input id="answer2"></input>
+        <button id="go" onclick="go2()">Go!!</button>
+      </div>
+  <div class="chat">
+    <div class="chat-messages"></div>
+    <textarea class="chat-textarea" placeholder="Type here"></textarea>
+    <button id="button">
+      <span>Logs!</span></button>
+  </div>
+  <div class="page">
+    <div ng-controller="Swicher as menu" style="background-image:url({{img}})"id="AboutMe">
+      <nav class="{{class}}">
+        <a href="#" class="About me" ng-click="data = menu.data.aboutMe;img = menu.data.img[0];class='About me'"\>About me</a>
+        <a href="#" class="What I like to do" ng-click="data= menu.data.activities;img = menu.data.img[1];class='What I like to do'">My activities</a>
+        <a href="#" class="Just another tab" ng-click="data= menu.data.angular;img = menu.data.img[2];class='Just another tab'">Another tab</a>
+      </nav>
+      <p id="textOnPage">{{data}}</p>
+    </div>
+  </div>
+  <div class="menu">
+    <div id="next" onclick="moveR()">Next</div>
+    <div id="previous" onclick="moveL()">Prev</div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
